@@ -21,9 +21,7 @@ class I18nTest < ActiveSupport::TestCase
 
   def test_files_are_normalized
     non_normalized = @i18n.non_normalized_paths
-    error_message = "The following files need to be normalized:\n" \
-                    "#{non_normalized.map { |path| "  #{path}" }.join("\n")}\n" \
-                    'Please run `i18n-tasks normalize` to fix'
+    error_message = "The following files need to be normalized:\n #{non_normalized.map { |path| "  #{path}" }.join("\n")}\n Please run `i18n-tasks normalize` to fix"
     assert_empty non_normalized, error_message
   end
 end

@@ -37,6 +37,12 @@ group :development, :test do
 
   # Mocking and stubbing library
   gem 'mocha', '~> 1.5'
+
+  # Code coverage
+  gem 'simplecov', '~> 0.16.1'
+
+  # Simple console output formatter for SimpleCov
+  gem 'simplecov-console', '~> 0.4.2'
 end
 
 group :development do
