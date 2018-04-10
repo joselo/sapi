@@ -1,0 +1,19 @@
+h1:
+  web_site: ruby
+  name: h1
+  content: "Title"
+
+h2:
+  web_site: ruby
+  name: h2
+  content: "Sub Title"
+
+h3:
+  web_site: ruby
+  name: h3
+  content: "Second Title"
+
+a:
+  web_site: ruby
+  name: a
+  content: "Link"
