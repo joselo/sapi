@@ -9,6 +9,13 @@ class Api::WebSitesControllerTest < ActionDispatch::IntegrationTest
     json.strip
   end
 
+  def raw_pagination
+    json = <<-JSON
+    "links":{"first":"http://www.example.com/api/web-sites?page%5Bnumber%5D=1&page%5Bsize%5D=10","last":"http://www.example.com/api/web-sites?page%5Bnumber%5D=1&page%5Bsize%5D=10"}
+    JSON
+    json.strip
+  end
+
   def web_site_json(web_site)
     json = <<-JSON
       {"data":#{raw_web_site_json(web_site)}}
@@ -19,7 +26,7 @@ class Api::WebSitesControllerTest < ActionDispatch::IntegrationTest
   def web_sites_json(web_sites)
     json_fragments = web_sites.map {|web_site| raw_web_site_json(web_site) }
     json = <<-JSON
-      {"data":[#{json_fragments.join(',')}]}
+      {"data":[#{json_fragments.join(',')}],#{raw_pagination}}
     JSON
     json.strip
   end
