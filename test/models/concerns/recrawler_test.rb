@@ -32,17 +32,17 @@ class RecrawlerTest < ActiveSupport::TestCase
     @tempfile.unlink
   end
 
-  test '#css_content' do
-    tag_h1 = @rust.css_content('h1', @doc_h1)
+  test '#css_value' do
+    tag_h1 = @rust.css_value('h1', @doc_h1)
     assert_equal tag_h1, @doc_h1.content
 
-    tag_a = @rust.css_content('a', @doc_a)
+    tag_a = @rust.css_value('a', @doc_a)
     assert_equal tag_a, @doc_a.attribute('href').value
 
-    tag_h1_empty = @rust.css_content('h1', @doc_h1_empty)
+    tag_h1_empty = @rust.css_value('h1', @doc_h1_empty)
     assert_nil tag_h1_empty
 
-    tag_a_empty = @rust.css_content('a', @doc_a_empty)
+    tag_a_empty = @rust.css_value('a', @doc_a_empty)
     assert_nil tag_a_empty
   end
 

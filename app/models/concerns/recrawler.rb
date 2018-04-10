@@ -15,7 +15,7 @@ module Recrawler
     @doc ||= Nokogiri::HTML(open_url)
   end
 
-  def css_content(name, css)
+  def css_value(name, css)
     case name
       when 'a'
         if css.attribute('href') and css.attribute('href').value.present?
@@ -27,7 +27,7 @@ module Recrawler
   end
 
   def build_tag(name, css)
-    content = css_content(name, css)
+    content = css_value(name, css)
 
     tags.build(name: name, content: content) if content.present?
   end
