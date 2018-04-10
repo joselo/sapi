@@ -1,6 +1,8 @@
 class Api::WebSiteResource < Api::ApplicationResource
   model_name 'WebSite'
 
+  paginator :paged
+
   attributes :url, :content
 
   def content
