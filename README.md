@@ -5,7 +5,8 @@ Sapi is a Simple Ruby on Rails Sample Api.
 **Creator:** José Carrión.
 
 [![Build Status](https://travis-ci.org/joselo/sapi.svg?branch=master)](https://travis-ci.org/joselo/sapi)
-[![Code Climate](https://codeclimate.com/github/joselo/sapi/badges/gpa.svg)](https://codeclimate.com/github/joselo/sapi)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b3a31ee5fd3c70a3d91b/maintainability)](https://codeclimate.com/github/joselo/sapi/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b3a31ee5fd3c70a3d91b/test_coverage)](https://codeclimate.com/github/joselo/sapi/test_coverage)
 
 ## Install
 
